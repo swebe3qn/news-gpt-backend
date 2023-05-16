@@ -39,7 +39,9 @@ let fetchData = async function(){
             let body = html.data.split('</head>').at(-1)
     
             let prompt = `
-              Füge den Artikel von der folgenden HTML-Seite in 4-6 Sätzen auf Deutsch zusammen. Erwähne Fotos dabei nicht.
+              Füge den Artikel von der folgenden HTML-Seite in 4-6 Sätzen auf Deutsch zusammen. Erwähne Fotos dabei nicht. 
+              Bitte schreibe den Text so, dass man nicht erkennt, dass es sich um eine Zusammenfassung handelt, sondern schreibe deinen eigenen Beitrag. Ein Beispiel für Einleitungen, 
+              die du NICHT verwenden sollst: "In diesem Artikel geht es um..."
     
               ${body}
             `
