@@ -9,7 +9,9 @@ let Configuration = require("openai").Configuration;
 let fetchData = async function(){
   console.log('scheduler started at ' + new Date())
 
-  let feed = await parser.parseURL('https://www.derstandard.at/rss');
+  let feed = await parser.parseURL(process.env.RSS_FEED_URL);
+  
+  if (!feed) return
 
   console.log(feed.items?.length + ' feed items fetched')
   
